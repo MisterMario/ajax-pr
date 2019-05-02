@@ -1,0 +1,104 @@
+<div id="rules" class="d-none">
+  <div id="title">
+    <div id="title-text">
+      <h1>Правила</h1>
+    </div>
+    <div id="btn-close">
+      <span onclick="rules();"><img src="<?php echo VIEW_DIR ?>images/btn-icon-close.png" alt=""></span>
+    </div>
+  </div>
+  <div id="content">
+    <ul>
+      <li class="heading">1. Правила составления имен</li>
+      <li>1.1 Максимальная длина строки в поле ФИ 64 символа.</li>
+      <li>1.2 Поле ФИ должно состоять из двух слов.</li>
+      <li>1.3 В поле ФИ можно использовать лишь русский и английский алфавит.</li>
+      <li>1.4 Максимальная длина логина 32 символа.</li>
+      <li>1.5 В логине можно использовать латинский алфавит, цифры и символ подчеркивания.</li>
+      <li class="heading">2. Возраст</li>
+      <li>2.1 Для ввода возраста разшено использовать лишь цифры.</li>
+      <li>2.2 Допустимый возраст: от 1-го до 99-ти лет.</li>
+      <li class="heading">3. E-mail</li>
+      <li>3.1 Правила для ввода e-mail такие же как и на др. сервисах.</li>
+      <li>3.2 Максимальная длина e-mail 64 символа.</li>
+      <li>3.3 Допускается использовать лишь 4 почтовых сервера: gmail.ru, gmail.com, mail.com и mail.ru.</li>
+      <li class="heading">4. Пароль</li>
+      <li>4.1 Минимальная длина пароля 4 символа.</li>
+      <li>4.2 Максимальная длина пароля 32 символа.</li>
+      <li>4.3 В пароле допустимо использование любых символов.</li>
+      <li class="heading">5. Аватар пользователя</li>
+      <li>5.1 Максимальный размер аватрки: 500x500.</li>
+      <li>5.2 Максимальный размер файла аватарки: 500 КБ.</li>
+    </ul>
+  </div>
+</div>
+<div id="info-block" class="register">
+  <div id="message" class="<?php if (isset($message)) echo $message[0]; else echo 'd-none' ?>">
+    <div id="text">
+      <?php if (isset($message)) echo $message[1]; ?>
+    </div>
+    <div id="btn-close">
+      <span onclick="hideMessage();"><img src="<?php echo VIEW_DIR ?>images/message-btn-close.png" alt=""></span>
+    </div>
+  </div>
+  <div id="empty-message" class="<?php if (isset($message)) echo 'd-none' ?>"></div>
+  <div id="info">
+    <div id="title">
+      <h1>Регистрация</h1>
+    </div>
+    <div id="inside-info">
+      <div id="form">
+        <form action="" method="post">
+          <div class="row flat-row">
+            <label for="name">ФИ:</label>
+            <input type="text" id="name" name="name" placeholder="Холмс Шерлок">
+          </div>
+          <div class="row flat-row mt-10px">
+            <label for="age">Возраст:</label>
+            <input type="text" id="age" name="age" placeholder="">
+          </div>
+          <div class="row flat-row mt-10px">
+            <label for="sex">Пол:</label>
+            <select name="sex" id="sex-list">
+              <option value="0" selected>Мужчина</option>
+              <option value="1">Женщина</option>
+            </select>
+          </div>
+          <div class="row flat-row mt-10px">
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" placeholder="example@mail.ru">
+          </div>
+          <div class="row flat-row mt-10px">
+            <label for="login">Логин:</label>
+            <input type="text" id="login" name="login" placeholder="">
+          </div>
+          <div class="row flat-row mt-10px">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" placeholder="">
+          </div>
+          <div class="row flat-row mt-10px">
+            <label for="repassword">Повтор пароля:</label>
+            <input type="password" id="repassword" name="repassword" placeholder="">
+          </div>
+          <div class="row ta-center mt-10px">
+            <span id="get-rules" onclick="rules();">Ознакомиться с правилами</span>
+          </div>
+          <div class="row ta-center mt-10px">
+            <label class="pointer">
+              <input type="checkbox" name="iagree" id="iagree" value="iagree">
+              <span class="wrapper-checkbox-custom"></span>
+              <span class="checkbox-custom"></span>
+              <span class="label">Я ознакомился с правилами проекта</span>
+            </label>
+          </div>
+          <div class="row ta-center mt-10px">
+            <button type="button" id="btn-registration" onclick="goRegister();">Зарегистрироваться</button>
+          </div>
+          <div class="row ta-center">
+            <button type="button" id="btn-login" onclick="getStaticPage('login', true);">Авторизация</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

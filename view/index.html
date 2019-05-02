@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title><!-- Заголовок определяется на этапе загрузки -->
+  <link rel="stylesheet" href="<?php echo VIEW_DIR ?>styles/styles.css" type="text/css">
+  <script type="text/javascript" src="<?php echo VIEW_DIR ?>js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="<?php echo VIEW_DIR ?>js/history.js"></script>
+  <script type="text/javascript" src="<?php echo VIEW_DIR ?>js/ajax.js"></script>
+  <script type="text/javascript" src="<?php echo VIEW_DIR ?>js/message.js"></script>
+  <script type="text/javascript" src="<?php echo VIEW_DIR ?>js/avatar.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="inside-header">
+        <ul>
+          <li><a href="#"><img src="<?php echo VIEW_DIR ?>images/social-icon-1.png" alt=""></a></li>
+          <li><a href="#"><img src="<?php echo VIEW_DIR ?>images/social-icon-2.png" alt=""></a></li>
+          <li><a href="#"><img src="<?php echo VIEW_DIR ?>images/social-icon-3.png" alt=""></a></li>
+          <li><a href="#"><img src="<?php echo VIEW_DIR ?>images/social-icon-4.png" alt=""></a></li>
+          <li><a href="#"><img src="<?php echo VIEW_DIR ?>images/social-icon-5.png" alt=""></a></li>
+          <li><a href="#"><img src="<?php echo VIEW_DIR ?>images/social-icon-6.png" alt=""></a></li>
+          <li><a href="#"><img src="<?php echo VIEW_DIR ?>images/social-icon-7.png" alt=""></a></li>
+          <li><a href="#"><img src="<?php echo VIEW_DIR ?>images/social-icon-8.png" alt=""></a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content">
+      <!-- Класс определяется во время подгрузки -->
+      <?php echo $info_block; ?>
+    </div>
+    <div id="footer">
+      <p>&copy Проект разработал MrMario. Дизайн от KeelGore.</p>
+    </div>
+  </div>
+</body>
+</html>

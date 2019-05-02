@@ -1,0 +1,400 @@
+/*
+Model (psd) by KeelGore
+Styles by MrMario
+*/
+@import url(reset.css);
+
+html {
+  font-family: "Tahoma";
+  font-size: 16px;
+}
+h1 {
+  font-size: 22px;
+}
+.d-none {
+  display: none!important;
+}
+
+#container {
+  width: 100%;
+}
+#container #header {
+  width: 100%;
+  height: 72px;
+  background: #5674b9;
+}
+#container #header #inside-header {
+  width: 647px;
+  height: inherit;
+  margin: 0 auto;
+}
+#container #header #inside-header ul li {
+  float: left;
+  margin: 4px 0 0 20.7px;
+}
+#container #header #inside-header ul li:first-child {
+  margin-left: 0;
+}
+#container #content {
+  width: 100%;
+}
+#container #content #message {
+  width: calc(100% - 4px);
+  border: 2px dashed #005826;
+  overflow: hidden;
+}
+#container #content #empty-message { /* Если сообщения нет, то вместо него пустое место. */
+  width: calc(100% - 4px);
+  height: 32px;
+}
+#container #content #message #text {
+  float: left;
+  width: calc(100% - 25px);
+  margin: 5px 0;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+#container #content #message #btn-close {
+  float: left;
+  margin-top: 4px;
+}
+#container #content #message #btn-close span {
+  cursor: pointer;
+}
+#container #content #message.successful {
+  background: #56bc6f;
+}
+#container #content #message.fail {
+  background: #be486f;
+}
+#container #content #info-block {
+  width: 541px;
+  margin: 88px auto 0 auto;
+}
+#container #content #info-block #info {
+  width: calc(100% - 12px);
+  border: 6px solid #959595;
+}
+#container #content #info-block #info #title {
+  width: 100%;
+  color: #000;
+  text-align: center;
+  margin-top: 8px;
+}
+#container #content #info-block #info #inside-info {
+  width: 230px;
+  margin: 43px auto 10px auto;
+}
+#container #content #info-block #info #inside-info #form {
+  font-size: 15px;
+}
+#container #content #info-block #info #inside-info #form .flat-row {
+  clear: both;
+  text-align: right;
+  line-height: 25px;
+}
+#container #content #info-block #info #inside-info #form .flat-row label {
+  float: left;
+}
+#container #content #info-block #info #inside-info #form .mt-18px {
+  margin-top: 18px!important;
+}
+#container #content #info-block #info #inside-info #form .row input[type="text"],
+#container #content #info-block #info #inside-info #form .row input[type="password"],
+#container #content #info-block #info #inside-info #form .row select {
+  width: 160px;
+  border: 1px solid #5674b9;
+  font-size: 15px;
+  padding: 4px;
+}
+#container #content #info-block #info #inside-info #form .row select {
+  width: 170px;
+}
+#container #content #info-block #info #inside-info #form .ta-center {
+  text-align: center!important;
+  margin: auto 0!important;
+}
+#container #content #info-block #info #inside-info #form .mt-10px {
+  margin-top: 10px!important;
+}
+#container #content #info-block #info #inside-info #form .row input[type="checkbox"] + label {
+  cursor: pointer;
+}
+/* Кастомизация чекбокса */
+#container #content #info-block #info #inside-info #form .row label.pointer {
+  cursor: pointer;
+}
+#container #content #info-block #info #inside-info #form .row input[type="checkbox"] {
+  display: none;
+}
+#container #content #info-block #info #inside-info #form .row label .wrapper-checkbox-custom {
+  width: 21px;
+  height: 21px;
+  position: relative;
+  z-index: 2;
+}
+#container #content #info-block #info #inside-info #form .row label .checkbox-custom {
+  width: 11px;
+  height: 11px;
+  border: 1px solid #959595;
+  position: relative;
+  z-index: 1;
+  margin-left: -22px;
+}
+#container #content #info-block #info #inside-info #form .row label .label,
+#container #content #info-block #info #inside-info #form .row label .wrapper-checkbox-custom,
+#container #content #info-block #info #inside-info #form .row label .checkbox-custom {
+  display: inline-block;
+  vertical-align: bottom;
+}
+#container #content #info-block #info #inside-info #form .row label input[type="checkbox"]:checked + .wrapper-checkbox-custom {
+  background: url(../images/checkbox-ok.png) 0 0 no-repeat;
+}
+/* Конец кастомизации чекбокса */
+#container #content #info-block #info #inside-info #form .row button {
+  width: 224px;
+  padding: 14px 0;
+  outline: none;
+  font-size: 15px;
+}
+#container #content #info-block #info #inside-info #form .row button#btn-login {
+  background: #5674b9;
+  border: 2px solid #5674b9;
+}
+#container #content #info-block #info #inside-info #form .row button#btn-login:hover {
+  background: #8eb0bd;
+  cursor: pointer;
+}
+#container #content #info-block #info #inside-info #form .row button#btn-registration {
+  background: #0ec63c;
+  border: 2px solid #0ec63c;
+}
+#container #content #info-block #info #inside-info #form .row button#btn-registration:hover {
+  background: #88d286;
+  cursor: pointer;
+}
+#container #content #info-block.register #info #inside-info {
+  width: 100%;
+  margin: 10px 0;
+}
+#container #content #info-block.register #info #inside-info #form {
+  width: 100%;
+}
+#container #content #info-block.register #info #inside-info #form .row {
+  margin-right: 160px;
+}
+#container #content #info-block.register #info #inside-info #form .flat-row label {
+  float: none;
+}
+#container #content #info-block.register #info #inside-info #form .row span#get-rules {
+  color: #5674b9;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#container #content #info-block.register #info #inside-info #form .row span:hover#get-rules {
+  text-decoration: none;
+}
+#container #content #rules {
+  width: 529px;
+  left: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin: 192px auto 0 auto;
+  border: 6px solid #959595;
+  background: #fff;
+  z-index: 3;
+}
+#container #content #rules #title #title-text {
+  width: calc(100% - 30px);
+  float: left;
+  text-align: center;
+  margin-top: 2px;
+}
+#container #content #rules #title #btn-close {
+  margin: 5px 5px 0 0;
+}
+#container #content #rules #title #btn-close span {
+  cursor: pointer;
+}
+#container #content #rules #content {
+  line-height: 1.4em;
+  padding: 5px;
+}
+#container #content #rules #content ul li.heading {
+  font-weight: bold;
+  line-height: 2em;
+}
+#container #content #info-block.profil {
+  width: 804px;
+}
+#container #content #info-block.profil #info #inside-info {
+  width: 100%;
+  margin: 11px;
+  overflow: hidden;
+}
+#container #content #info-block.profil #info #inside-info #left-block {
+  float: left;
+  width: 217px
+}
+#container #content #info-block.profil #info #inside-info #left-block img {
+  border: 2px solid #000;
+  width: 213px;
+  height: 213px;
+}
+#container #content #info-block.profil #info #inside-info #left-block #load-image {
+  display: none;
+}
+#container #content #info-block.profil #info #inside-info #left-block button {
+  width: 100%;
+  padding: 17px;
+  margin-top: 6px;
+  outline: none;
+  color: #fff;
+}
+#container #content #info-block.profil #info #inside-info #left-block button:hover {
+  cursor: pointer;
+}
+#container #content #info-block.profil #info #inside-info #left-block button.btn-yellow {
+  background: #efd601;
+  border: 2px solid #efd601;
+}
+#container #content #info-block.profil #info #inside-info #left-block button.btn-yellow:hover {
+  background: #d29c1c;
+  border-color: #d29c1c;
+}
+#container #content #info-block.profil #info #inside-info #left-block button.btn-green {
+  background: #137535;
+  border: 2px solid #137535;
+}
+#container #content #info-block.profil #info #inside-info #left-block button.btn-green:hover {
+  background: #317e19;
+  border-color: #317e19;
+}
+#container #content #info-block.profil #info #inside-info #left-block button.btn-red {
+  background: #9e0b0f;
+  border: 2px solid #9e0b0f;
+}
+#container #content #info-block.profil #info #inside-info #left-block button.btn-red:hover {
+  background: #790808;
+  border-color: #790808;
+}
+#container #content #info-block.profil #info #inside-info #right-block {
+  float: left;
+  margin-left: 20px;
+}
+#container #content #info-block.profil #info #inside-info #right-block ul li {
+  margin-top: 14px;
+}
+#container #content #info-block.profil #info #inside-info #right-block ul li:first-child {
+  margin-top: 0;
+}
+#container #content #info-block.profil #info #inside-info #right-block ul li input {
+  padding: 0;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+}
+#container #content #info-block.profil #info #inside-info #right-block ul li select {
+  width: 195px;
+  font-size: 16px;
+  outline: none;
+  letter-spacing: -0.015em; /* Чтобы текст отображался как и обычно */
+}
+#container #content #info-block.profil #info #inside-info #right-block ul.info-edit li {
+  margin-top: 11px;
+}
+#container #content #info-block.profil #info #inside-info #right-block ul.info-edit li.mt-fix-1 {
+  margin-top: 9px;
+}
+#container #content #info-block.profil #info #inside-info #right-block ul.info-edit li.mt-fix-2 {
+  margin-top: 12px;
+}
+/* Для того, чтобы списки и информация о профиля были на одном расстоянии от label-ов */
+#container #content #info-block.profil #info #inside-info #right-block ul.info-edit li select.ml-fix {
+  margin-left: -5px;
+}
+#container #content #info-block.profil #info #inside-info #right-block ul.info-edit li:first-child {
+  margin-top: 0;
+}
+#container #content #info-block.profil #info #inside-info #control-buttons {
+  float: right;
+  margin-right: 17px;
+}
+#container #content #info-block.profil #info #inside-info #control-buttons span {
+  cursor: pointer;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account {
+  width: 322px;
+  left: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin: 300px auto 0 auto;
+  padding: 3px 3px 16px 3px;
+  border: 6px solid #959595;
+  background: #fff;
+  z-index: 3;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account #title {
+  margin-top: 0px;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account #title #title-text {
+  width: calc(100% - 30px);
+  float: left;
+  text-align: center;
+  margin-top: 0px;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account #title #btn-close {
+  cursor: pointer;
+  margin: 5px 5px 0 0;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account #relenish-account-content {
+  text-align: center;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account #relenish-account-content #money-input {
+  width: 227px;
+  margin: 7px auto 0 auto;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account #relenish-account-content #money-input input[type="text"] {
+  float: left;
+  width: 159px;
+  padding: 5px;
+  outline: none;
+  border: 1px solid #5674b9;
+  margin: 0 10px;
+  text-align: center;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account #relenish-account-content #money-input span {
+  float: left;
+  cursor: pointer;
+  margin-top: 5px;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account #relenish-account-content button {
+  width: 224px;
+  padding: 17px;
+  margin-top: 18px;
+  outline: none;
+  color: #fff;
+  border: 0;
+  background: #137535;
+  cursor: pointer;
+}
+#container #content #info-block.profil #info #inside-info #relenish-account #relenish-account-content button:hover {
+  background: #317e19;
+}
+#container #footer {
+  width: 100%;
+  height: 72px;
+  background: #5674b9;
+  margin-top: 196px;
+}
+#container #footer p {
+  padding-top: 25px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+}

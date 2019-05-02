@@ -1,0 +1,73 @@
+<div id="info-block" class="profil">
+  <div id="message" class="<?php if (isset($message)) echo $message[0]; else echo 'd-none' ?>">
+    <div id="text">
+      <?php if (isset($message)) echo $message[1]; ?>
+    </div>
+    <div id="btn-close">
+      <span onclick="hideMessage();"><img src="<?php echo VIEW_DIR ?>images/message-btn-close.png" alt=""></span>
+    </div>
+  </div>
+  <div id="empty-message" class="<?php if (isset($message)) echo 'd-none' ?>"></div>
+  <div id="info">
+    <div id="inside-info">
+      <div id="relenish-account" class="d-none">
+        <div id="title">
+          <div id="title-text">
+            <h1>Пополнение баланса</h1>
+          </div>
+          <div id="btn-close">
+            <span onclick="relenishAccount();"><img src="<?php echo VIEW_DIR; ?>images/btn-icon-close.png" alt=""></span>
+          </div>
+        </div>
+        <div id="relenish-account-content">
+          <p>Сумма</p>
+          <div id="money-input">
+            <span onclick="btnMinus();"><img src="<?php echo VIEW_DIR; ?>images/icon-minus.png" alt=""></span>
+            <input type="text" id="set-money-input" value="0">
+            <span onclick="btnPlus();"><img src="<?php echo VIEW_DIR; ?>images/icon-plus.png" alt=""></span>
+          </div>
+          <button type="button" onclick="goMoney();">Пополнить баланс</button>
+        </div>
+      </div>
+      <div id="left-block">
+        <img src="<?php echo A_DIR.$user->getAvatarName(); ?>" id="img-avatar" alt="">
+        <div id="load-image">
+          <input type="file" id="avatar" accept="image/x-png" onchange="loadFile();">
+        </div>
+        <button type="button" class="btn-yellow" onclick="findFile();">Загрузить фото</button>
+        <button type="button" class="btn-green" onclick="relenishAccount();">Пополнить баланс</button>
+        <button type="button" class="btn-red" onclick="getStaticPage('logout');">Выход</button>
+      </div>
+      <div id="right-block">
+        <ul class="info-edit">
+          <li>ФИ: <input type="text" name="name" value="<?php echo $user->getName() ?>"></li>
+          <li>Возраст: <input type="text" name="age" value="<?php echo $user->getAge() ?>"></li>
+          <li class="mt-fix-1">Пол:
+            <select name="gender" id="gender-list" class="ml-fix">
+              <option value="0" <?php if ($user->getGenderId() == 0) echo "selected"; ?>>мужчина</option>
+              <option value="1" <?php if ($user->getGenderId() == 1) echo "selected"; ?>>женщина</option>
+            </select>
+          </li>
+          <li>E-mail: <input type="text" name="email" value="<?php echo $user->getEmail() ?>"></li>
+          <li>Баланс: <span id="balance-value"><?php echo $user->getMoney(); ?></span><?php echo " ".CURRENCY; ?></li>
+          <li class="mt-fix-2">Группа:
+            <select name="group_id" id="group-list" class="ml-fix">
+              <?php echo GroupsManager::getGroupsList($user->getGroupId()); ?>
+            </select>
+          </li>
+          <li>Логин: <input type="text" name="login" value="<?php echo $user->getLogin() ?>"></li>
+          <li>Skype: <input type="text" name="skype" value="<?php echo $user->getSkype() ?>"></li>
+          <li>ВК: <input type="text" name="vk" value="<?php echo $user->getVK() ?>"></li>
+          <li>Facebook: <input type="text" name="facebook" value="<?php echo $user->getFacebook() ?>"></li>
+          <li>Старый пароль: <input type="password" name="old_password"></li>
+          <li>Новый пароль: <input type="password" name="new_password"></li>
+          <li>Повтор нового пароля: <input type="password" name="new_repassword"></li>
+        </ul>
+      </div>
+      <div id="control-buttons">
+        <span onclick="goSaveChangesToProfil();"><img src="<?php echo VIEW_DIR ?>images/btn-icon-ok.png" alt=""></span>
+        <span onclick="getStaticPage('profil', true);"><img src="<?php echo VIEW_DIR ?>images/btn-icon-close.png" alt=""></span>
+      </div>
+    </div>
+  </div>
+</div>
